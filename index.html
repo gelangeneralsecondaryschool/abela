@@ -1,26 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
-  <title>Derartu Tulu Secondary Schoool</title>
- 
-  <meta name="description" content="Derartu Tulu High School is named after Derartu Tulu, 
-  an Ethiopian long-distance runner who won gold medals in the 10,000 meters at the 1992 Barcelona Olympics and the 2000 Sydney Olympics. 
-  The school is named in her honor but without further context information about it. If you are looking for details about this particular school,
-   visit the website">
-  <meta name="keywords" content="Derartu Tulu Secondary School ">
+  <title data-en="Gelan General Secondary School" data-am="ገላን ጄኔራል ሰረኛ ትምህርት ቤት"
+    data-om="Mana Barumsa Sadarkaa 2ffaa Geelan">Gelan General Secondary School</title>
+
+  <meta name="description" content="Welcome to Gelan General Secondary School"
+    data-en="Welcome to Gelan General Secondary School, located in the dynamic area of Akaki Kality within the Gelan Condominium of Addis Ababa, Ethiopia, is a distinguished educational institution. Since its establishment in 2010 (Ethiopian Calendar), the school has become a vital part of the community, renowned for its dedication to academic excellence and holistic student development."
+    data-am="ወደ ገላን አጠቃላይ ሁለተኛ ደረጃ ትምህርት ቤት እንኳን በደህና መጡ። በኢትዮጵያ አዲስ አበባ አቃቂ ቃሊቲ ከተማ ውስጥ በሚገኘው ገላን ኮንዶሚኒየም ውስጥ የሚገኝ ይህ ትምህርት ቤት በትምህርት ውጤታማነት እና በተማሪዎች ሙሉ እድገት ላይ ትኩረት በማድረግ የታወቀ የትምህርት ተቋም ነው። ከ2010 ዓ.ም. ጀምሮ በማገልገል ላይ የሚገኘው ይህ ትምህርት ቤት የማህበረሰቡ አስፈላጊ ክፍል ሆኗል።"
+    data-om="Baga nagaan dhuftan mana barumsa sadarkaa 2ffaa Geelan, bakka dinagdee Akaki Kality keessatti argamu, naannoo kondomiinii Geelan, Finfinnee, Itoophiyaatti argamu. Mana barumsa kana yeroo 2010 (Kaalaandarii Itoophiyaa) jalqabamee fi barumsa guddaa fi guddina guutaa barsiisuu keessatti kan beekamu dha. Mana barumsa kanaa hawaasa keessatti gosa barbaachisaa ta'ee jira.">
+
+  <meta name="keywords" content="Gelan School, Secondary School Ethiopia"
+    data-en="Gelan School, Secondary School Ethiopia, Addis Ababa Education, Akaki Kality School"
+    data-am="ገላን ትምህርት ቤት, ሁለተኛ ደረጃ ትምህርት ቤት ኢትዮጵያ, አዲስ አበባ ትምህርት, አቃቂ ቃሊቲ ትምህርት ቤት"
+    data-om="Mana Barumsa Geelan, Mana Barumsa Sadarkaa 2ffaa Itoophiyaa, Barumsa Finfinnee, Mana Barumsa Akaki Kality">
+
+  <meta name="author" content="Gelan General Secondary School">
+  <meta name="generator" content="Gelan School Management System">
+
   <!-- Favicons -->
-  <link href="assets/img/logo/logo.jpg" rel="icon">
-  <link href="assets/img/logo/logo.jpg" rel="apple-touch-icon">
+  <link href="assets/All/logo/photo_2024-02-21_08-48-19.jpg" rel="icon">
+  <link href="assets/All/logo/photo_2024-02-21_08-48-19.jpg" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -36,126 +43,276 @@
 
 <body>
 
+
+  <style>
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #3498db;
+      --text-light: #ecf0f1;
+    }
+
+
+    /* Language Switcher */
+    .language-switcher .dropdown-toggle {
+      color: var(--text-light) !important;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .language-switcher .dropdown-menu {
+      min-width: 120px;
+      border: none;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .language-switcher .dropdown-item {
+      font-size: 0.9em;
+      padding: 8px 15px;
+    }
+
+    /* Mobile View */
+    @media (max-width: 991px) {
+      .navbar ul {
+        padding-right: 0;
+      }
+
+      .language-switcher {
+        order: 2;
+        margin-left: auto;
+      }
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const langHandler = {
+        currentLang: localStorage.getItem('siteLang') || 'en',
+
+        init() {
+          this.setLanguage(this.currentLang);
+          this.bindEvents();
+        },
+
+        bindEvents() {
+          document.querySelectorAll('[data-lang]').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+              e.preventDefault();
+              this.setLanguage(e.target.dataset.lang);
+            });
+          });
+        },
+
+        setLanguage(lang) {
+          this.currentLang = lang;
+          localStorage.setItem('siteLang', lang);
+
+          // Update content
+          document.querySelectorAll('[data-en], [data-am], [data-om]').forEach(el => {
+            if (el.dataset[lang]) {
+              el.textContent = el.dataset[lang];
+            }
+          });
+
+          // Update HTML attributes
+          document.documentElement.setAttribute('lang', lang);
+        }
+      };
+
+      langHandler.init();
+    });
+  </script>
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center header-transparent">
     <div class="container d-flex justify-content-between align-items-center">
 
       <div class="logo">
-        <h1 class="text-light"><a href="#!"><span><em><img src="assets/img/logo/logo.jpg" alt=""></em></span></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        <h1 class="text-light"><a href="index.html"><span><em><img src="assets/All/logo/photo_2024-02-21_08-48-19.jpg"
+                  alt="Gelan School Logo"></em></span></a></h1>
       </div>
-
       <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="active " href="index.html">Home</a></li>
-          <li class="dropdown"><a href="about.html"><span>About</span></a>
-            <ul>
-              <li><a href="about.html">About Derartu</a></li>
-              <li><a href="#">Message of Principal </a></li>
-              <li><a href="#">Event and Activity</a></li>
-              <li><a href="#">Student Fclities</a></li>
+        <ul class="d-flex align-items-center">
+          <!-- Language Switcher -->
+          <li class="nav-item dropdown language-switcher">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              <span data-en="English" data-am="አማርኛ" data-om="Afaan Oromoo">English</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
+              <li><a class="dropdown-item" href="#" data-lang="am">አማርኛ</a></li>
+              <li><a class="dropdown-item" href="#" data-lang="om">Afaan Oromoo</a></li>
             </ul>
           </li>
 
-          <li class="dropdown"><a href="services.html"><span>Acadamic</span></a>
+          <nav id="navbar" class="navbar">
             <ul>
-              <li><a href="services.html">Student Life over view</a></li>
-              <li><a href="services.html">Sport</a></li>
-              <li><a href="services.html">Arts</a></li>
-              <li><a href="services.html">music</a></li>
-              <li><a href="services.html">Other</a></li>
-            </ul>
-          <li class="dropdown"><a href="portfolio.html"><span>Gallery</span></a>
-            <ul>
-              <li><a href="portfolio.html">Student</a></li>
-              <li><a href="portfolio.html">Teacher</a></li>
-              <li><a href="portfolio.html">Administration</a></li>
-              <li><a href="portfolio.html">Day of Picture</a></li>
-              <li><a href="portfolio.html">Other</a></li>
-            </ul>
-          <li class="dropdown"><a href="team.html"><span>Team</span></a>
-            <ul>
-              <li><a href="#">Academics overview</a></li>
-              <li><a href="#">Academics Service</a></li>
-              <li class="dropdown"><a href="#"><span>Grade</span> <i class="bi bi-chevron-right"></i></a>
+              <li><a class="active" href="index.html" data-en="Home" data-am="መግቢያ" data-om="Mana">Home</a></li>
+
+              <li class="dropdown"><a href="about.html" data-en="About" data-am="ስለ ትምህርት ቤቱ"
+                  data-om="Waa'ee"><span>About</span></a>
                 <ul>
-                  <li><a href="#">Grade 9</a></li>
-                  <li><a href="#">Grade 10</a></li>
-                  <li class="dropdown"><a href="#"><span>Grade 11</span> <i class="bi bi-chevron-right"></i></a>
-                    <ul>
-                      <li><a href="#">Natural</a></li>
-                      <li><a href="#">Social</a></li>
-                    </ul>
-                  <li class="dropdown"><a href="#"><span>Grade 12</span> <i class="bi bi-chevron-right"></i></a>
-                    <ul>
-                      <li><a href="#">Natural</a></li>
-                      <li><a href="#">Social</a></li>
-                    </ul>
-
+                  <li><a href="about.html" data-en="About Gelan" data-am="ስለ ገላን ትምህርት ቤት" data-om="Waa'ee Geelan">About
+                      Gelan</a></li>
+                  <li><a href="#" data-en="Principal's Message" data-am="የት/ቤት ርዕሰ መምህር መልእክት"
+                      data-om="Ergaa Paarlaamaa">Principal's Message</a></li>
+                  <li><a href="#" data-en="Events & Activities" data-am="ክስተቶች እና እንቅስቃሴዎች"
+                      data-om="Dhaggeeffannoo fi Hojiiwwan">Events & Activities</a></li>
+                  <li><a href="#" data-en="Student Facilities" data-am="የተማሪ መሳሪያዎች"
+                      data-om="Qopheessaa Barattoota">Student Facilities</a></li>
                 </ul>
-              <li><a href="#">Academics blog</a></li>
-            </ul>
+              </li>
 
-          <li class="dropdown"><a href="blog.html"><span>Blog</span></a>
-            <ul>
-              <li><a href="blog.html">Principals Blog</a></li>
-              <li><a href="blog.html">Teachers Blog</a></li>
-              <li><a href="blog.html">Student Blog</a></li>
-              <li><a href="blog.html">Administration Blog</a></li>
-              <li><a href="blog.html">Academics blog</a></li>
+              <li class="dropdown"><a href="services.html" data-en="Academic" data-am="ትምህርታዊ"
+                  data-om="Barumsaa"><span>Academic</span></a>
+                <ul>
+                  <li><a href="services.html" data-en="Student Life Overview" data-am="የተማሪ ሕይወት አጠቃላይ እይታ"
+                      data-om="Ijaarsa Jireenya Barattoota">Student Life Overview</a></li>
+                  <li><a href="services.html" data-en="Sports" data-am="ስፖርት" data-om="Spoorii">Sports</a></li>
+                  <li><a href="services.html" data-en="Arts" data-am="ኪነ-ጥበብ" data-om="Aartii">Arts</a></li>
+                  <li><a href="services.html" data-en="Music" data-am="ሙዚቃ" data-om="Muuziqaa">Music</a></li>
+                  <li><a href="services.html" data-en="Other" data-am="ሌሎች" data-om="Kan Biroo">Other</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="portfolio.html" data-en="Gallery" data-am="ፎቶ ማህደር"
+                  data-om="Gaaleerii"><span>Gallery</span></a>
+                <ul>
+                  <li><a href="portfolio.html" data-en="Students" data-am="ተማሪዎች" data-om="Barattoota">Students</a></li>
+                  <li><a href="portfolio.html" data-en="Teachers" data-am="መምህራን" data-om="Barsiisotaa">Teachers</a>
+                  </li>
+                  <li><a href="portfolio.html" data-en="Administration" data-am="አስተዳደር"
+                      data-om="Bulchiinsa">Administration</a></li>
+                  <li><a href="portfolio.html" data-en="Photo of the Day" data-am="የቀኑ ፎቶ" data-om="Suuraa Guyyaa">Photo
+                      of the Day</a></li>
+                  <li><a href="portfolio.html" data-en="Other" data-am="ሌሎች" data-om="Kan Biroo">Other</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="team.html" data-en="Academics" data-am="ትምህርት"
+                  data-om="Barumsaa"><span>Academics</span></a>
+                <ul>
+                  <li><a href="#" data-en="Academic Overview" data-am="ትምህርታዊ አጠቃላይ እይታ"
+                      data-om="Ijaarsa Barumsaa">Academic Overview</a></li>
+                  <li><a href="#" data-en="Academic Services" data-am="የትምህርት አገልግሎቶች"
+                      data-om="Tajaajila Barumsaa">Academic Services</a></li>
+                  <li class="dropdown"><a href="#" data-en="Grades" data-am="ደረጃዎች"
+                      data-om="Sadarkaa"><span>Grades</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="#" data-en="Grade 9" data-am="9ኛ ክፍል" data-om="Sadarkaa 9ffaa">Grade 9</a></li>
+                      <li><a href="#" data-en="Grade 10" data-am="10ኛ ክፍል" data-om="Sadarkaa 10ffaa">Grade 10</a></li>
+                      <li class="dropdown"><a href="#" data-en="Grade 11" data-am="11ኛ ክፍል"
+                          data-om="Sadarkaa 11ffaa"><span>Grade 11</span> <i class="bi bi-chevron-right"></i></a>
+                        <ul>
+                          <li><a href="#" data-en="Natural" data-am="ተፈጥሯዊ" data-om="Uumama">Natural</a></li>
+                          <li><a href="#" data-en="Social" data-am="ማህበራዊ" data-om="Hawaasummaa">Social</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown"><a href="#" data-en="Grade 12" data-am="12ኛ ክፍል"
+                          data-om="Sadarkaa 12ffaa"><span>Grade 12</span> <i class="bi bi-chevron-right"></i></a>
+                        <ul>
+                          <li><a href="#" data-en="Natural" data-am="ተፈጥሯዊ" data-om="Uumama">Natural</a></li>
+                          <li><a href="#" data-en="Social" data-am="ማህበራዊ" data-om="Hawaasummaa">Social</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a href="#" data-en="Academic Blog" data-am="የትምህርት ብሎግ" data-om="Bloog Barumsaa">Academic
+                      Blog</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="blog.html" data-en="Blog" data-am="ብሎግ"
+                  data-om="Bloogii"><span>Blog</span></a>
+                <ul>
+                  <li><a href="blog.html" data-en="Principal's Blog" data-am="የርዕሰ መምህር ብሎግ"
+                      data-om="Bloog Paarlaamaa">Principal's Blog</a></li>
+                  <li><a href="blog.html" data-en="Teachers' Blog" data-am="የመምህራን ብሎግ"
+                      data-om="Bloog Barsiisotaa">Teachers' Blog</a></li>
+                  <li><a href="blog.html" data-en="Students' Blog" data-am="የተማሪዎች ብሎግ"
+                      data-om="Bloog Barattoota">Students' Blog</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="contact.html" data-en="Contact" data-am="አድራሻ"
+                  data-om="Bilbila"><span>Contact Us</span></a>
+                <ul>
+                  <li><a href="#" data-en="Call" data-am="ይደውሉ" data-om="Bilbilaa">Call</a></li>
+                  <li><a href="#" data-en="Message" data-am="መልእክት" data-om="Ergaa">Message</a></li>
+                  <li><a href="#" data-en="Map" data-am="ካርታ" data-om="Kaartaa">Map</a></li>
+                </ul>
+              </li>
             </ul>
-          <li class="dropdown"><a href="contact.html"><span>Contact Us</span></a>
-            <ul>
-              <li><a href="#">Call</a></li>
-              <li><a href="#">Massage</a></li>
-              <li><a href="#">Map</a></li>
-            </ul>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
 
     </div>
   </header><!-- End Header -->
-
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex justify-cntent-center align-items-center">
+  <section id="hero" class="d-flex justify-content-center align-items-center">
     <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
 
-      <!-- Slide 1 -->
+      <!-- Slide 1 - Welcome Message -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown"><em>Welcome</em> to our <em>School</em></h2>
-          <p class="animate__animated animate__fadeInUp">Derartu Tulu Secondary School</p>
-          <a href="#Section1" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
-        </div>
-      </div>
 
-      <!-- Slide 2 -->
-      <div class="carousel-item">
-        <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown"><em>እንኳን </em>ወደ <em>ትምህርት</em> ቤታችን <em>በደህና</em> መጡ
-            <em>::</em>
+          <h2 class="animate__animated animate__fadeInDown" data-duration-in=".3" data-animation-in="fadeInUp"
+            data-delay-in=".1" data-en="Welcome to our School" data-am="እንኳን በደህና መጡ ወደ ትምህርት ቤታችን"
+            data-om="Baga Nagaan Mana Barumsa Keenyaan Dhufte">
+            <em data-en="Welcome" data-am="እንኳን" data-om="Baga"></em>
+            Welcome to our School
           </h2>
-          <p class="animate__animated animate__fadeInUp">ደራርቱ ቱሉ ሁለተኛ ደረጃ ትምህርት ቤት </p>
-          <a href="#Section1" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
+          <p class="animate__animated animate__fadeInUp"
+            data-en="Gelan General Secondary School - Excellence in Education"
+            data-am="ገላን ጄኔራል ሁለተኛ ደረጃ ትምህርት ቤት - በትምህርት ውጤታማነት"
+            data-om="Mana Barumsaa Sadarkaa 2ffaa Geelan - Qophiina Barumsaa">
+            Gelan General Secondary School
+          </p>
+          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp" data-en="Learn More"
+            data-am="ተጨማሪ ይወቁ" data-om="Dabalataan Barraa">
+            Learn More
+          </a>
         </div>
       </div>
 
-      <!-- Slide 3 -->
+      <!-- Slide 2 - Academic Excellence -->
       <div class="carousel-item">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown"><em>Baga</em> gara <em>mana</em>barumsaa <em>keenyaatti</em>
-            dhuftan</h2>
-          <p class="animate__animated animate__fadeInUp">Mana Barumsaa Sadarkaa Lammaffaa Derartu Tulu</p>
-          <a href="#Section1" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
+          <h2 class="animate__animated animate__fadeInDown">
+            <em data-en="Academic" data-am="ትምህርታዊ" data-om="Barumsaa"></em>
+            <span data-en="Excellence" data-am="እብሪት" data-om="Qophii"></span>
+          </h2>
+          <p class="animate__animated animate__fadeInUp" data-en="Ranked #1 in Addis Ababa Region"
+            data-am="በአዲስ አበባ ክልል #1 ደረጃ" data-om="Sadarkaa 1ffaa Naannoo Finfinnee">
+            Top Performing School
+          </p>
+          <a href="#academics" class="btn-get-started animate__animated animate__fadeInUp" data-en="Our Programs"
+            data-am="የትምህርት ፕሮግራሞች" data-om="Porojaramoonni Barumsaa">
+            Our Programs
+          </a>
         </div>
       </div>
 
+      <!-- Slide 3 - Community Engagement -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">
+            <em data-en="Community" data-am="ማህበረሰብ" data-om="Hawaasa"></em>
+            <span data-en="Partnership" data-am="አጋርነት" data-om="Waliigalaa"></span>
+          </h2>
+          <p class="animate__animated animate__fadeInUp" data-en="Building Future Leaders Together"
+            data-am="የወደፊት አመራሮችን በጋራ መገንባት" data-om="Hoggantoota Geerarsaa Waliin Ijaaruu">
+            Collaborative Learning Environment
+          </p>
+          <a href="#community" class="btn-get-started animate__animated animate__fadeInUp" data-en="Join Us"
+            data-am="አገናኙን" data-om="Natti Makamuu">
+            Join Us
+          </a>
+        </div>
+      </div>
+
+      <!-- Carousel Controls -->
       <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
         <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
       </a>
-
       <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
         <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
       </a>
@@ -163,242 +320,628 @@
     </div>
   </section><!-- End Hero -->
 
+
   <main id="main">
 
     <!-- ======= Services Section ======= -->
     <section class="services" id="Section1">
       <div class="container">
-
         <div class="row">
+          <!-- Academic -->
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
             <div class="icon-box icon-box-pink">
               <div class="icon"><i class="uil uil-book-reader"></i></div>
-              <h4 class="title"><a href="#section2">Acadamic</a></h4>
-              <p class="description">Academic discourse is important because it allows experts to talk about their
-                fields of study effectively. It is a way to discuss complex ideas with respect for each person's
-                knowledge level.</p>
+              <h4 class="title">
+                <a href="#section2" data-en="Academic" data-am="ትምህርታዊ" data-om="Barumsaa">Academic</a>
+              </h4>
+              <p class="description"
+                data-en="Academic discourse is important because it allows experts to talk about their fields of study effectively. It is a way to discuss complex ideas with respect for each person's knowledge level."
+                data-am="ትምህርታዊ ውይይት አስፈላጊ ነው ምክንያቱም ባለሙያዎች በትምህርታቸው መስክ በብቃት እንዲነጋገሩ ያስችላቸዋል። ይህ የተለያዩ የዕውቀት ደረጃዎች ያላቸውን ሰዎች በማክበር ውስብስብ ሀሳቦችን የሚያወያይበት መንገድ ነው።"
+                data-om="Haasawa barumsaa barbaachisaa dha sababni isaa ogummaan qabaniifi miseensota qorannoo isaanii waliin haala sirrii ta'een walqunnamtii qabaachuu danda’u. Karaan haasawa miira bal'aa kan namoota sadarkaa ogummaa adda addaa qaban waliin walqabatee dha.">
+                Academic discourse is important because it allows experts to talk about their fields of study
+                effectively...
+              </p>
             </div>
           </div>
 
+          <!-- School Life -->
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="icon-box icon-box-cyan">
               <div class="icon"><i class="bx bx-file"></i></div>
-              <h4 class="title"><a href="">School Life</a></h4>
-              <p class="description">School life refers to the period of time that a person spends studying at school,
-                typically from primary school to high school. During this time, students learn a variety of subjects,
-                participate in extracurricular activities, and form relationships with peers and teachers.</p>
+              <h4 class="title">
+                <a href="#" data-en="School Life" data-am="የትምህርት ቤት ሕይወት" data-om="Jireenya Mana Barumsaa">School
+                  Life</a>
+              </h4>
+              <p class="description"
+                data-en="School life refers to the period of time that a person spends studying at school, typically from primary school to high school. During this time, students learn various subjects, participate in extracurricular activities, and form relationships."
+                data-am="የትምህርት ቤት ሕይወት የአንድ ሰው በትምህርት ቤት የሚጠናበትን ጊዜ ያመለክታል። በዚህ ጊዜ ተማሪዎች የተለያዩ ርዕሰ ጉዳዮችን ያጠናሉ፣ ከክፍል ውጪ እንቅስቃሴዎችን ይሳተፋሉ፣ እና ግንኙነቶችን ይፈጥራሉ።"
+                data-om="Jireenya mana barumsaa yeroo namni mana barumsaa keessatti baratuudhaan. Yeroo kana keessatti barattoonni ogummaa adda addaa qabu, hojiiwwan alagaa hojjechuun, walqunnamtii uumuun kan beekamudha.">
+                School life refers to the period of time that a person spends studying at school...
+              </p>
             </div>
           </div>
 
+          <!-- Football -->
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="icon-box icon-box-green">
               <div class="icon"><i class="uil uil-football"></i></div>
-              <h4 class="title"><a href="">Football</a></h4>
-              <p class="description">High school football fosters athletic development, school spirit, and community
-                engagement. It promotes teamwork, discipline, and leadership among students while providing
-                opportunities for social interaction and college prospects through scholarships...</p>
+              <h4 class="title">
+                <a href="#" data-en="Football" data-am="እግር ኳስ" data-om="Kubbaa Miilaa">Football</a>
+              </h4>
+              <p class="description"
+                data-en="High school football fosters athletic development, school spirit, and community engagement. It promotes teamwork, discipline, and leadership among students while providing opportunities for social interaction."
+                data-am="የሁለተኛ ደረጃ ትምህርት ቤት እግር ኳስ የስፖርት እድገት፣ የትምህርት ቤት መንፈስ እና የማህበረሰብ ተሳትፎን ያበረታታል። በተማሪዎች መካከል የቡድን ሥራ፣ የተግሣጽ እና አመራርን ያበረታታል።"
+                data-om="Kubbaa miilaa mana barumsaa guddina qaamaa, hamtuu mana barumsaa, fi hawaasa waliin hirmaachuu dhiyeessaa. Walii gala, ittisa, fi hogganummaa barattoota gidduutti dhiyeessaa.">
+                High school football fosters athletic development, school spirit, and community engagement...
+              </p>
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+          <!-- Innovation -->
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="icon-box icon-box-blue">
               <div class="icon"><i class="bi bi-robot"></i></div>
-              <h4 class="title"><a href="">Innovation</a></h4>
-              <p class="description">Integrating innovation into high school education sparks creativity, critical
-                thinking, and adaptability, essential for future success. By linking classroom learning to real-world
-                scenarios, it prepares students for the challenges they'll face beyond graduation. Encouraging an
-                entrepreneurial mindset and tackling global issues empowers students to become lifelong learners and
-                proactive problem-solvers..</p>
+              <h4 class="title">
+                <a href="#" data-en="Innovation" data-am="ፈጠራ" data-om="Qo'annoomsa">Innovation</a>
+              </h4>
+              <p class="description"
+                data-en="Integrating innovation into high school education sparks creativity, critical thinking, and adaptability. By linking classroom learning to real-world scenarios, it prepares students for challenges beyond graduation."
+                data-am="ፈጠራን በሁለተኛ ደረጃ ትምህርት ውስጥ ማስገባት ፈጣሪነትን፣ ወሳኝ አስተሳሰብን እና ተስማሚነትን ያበረታታል። የክፍል ትምህርትን ከእውነተኛ ዓለም ጋር በማገናኘት ተማሪዎችን ለትምህርታቸው በላይ ለሚያጋጥሟቸው ፈተናዎች ያዘጋጃቸዋል።"
+                data-om="Qo'annoomsa mana barumsaa keessatti dhiyeenya uumamaa, yaada miiraa, fi jijjiiramaa dhiyeessaa. Barumsa qajeelcha dhuunfaa wajjin walqabsiisuun barattoota ulfaata duulaa irraa eegaluuf qopheessaa.">
+                Integrating innovation into high school education sparks creativity, critical thinking...
+              </p>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+    <section class="about" data-aos="fade-up">
+      <div class="container">
 
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="assets/All/images/about.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+
+            <h3 data-am="አጠቃላይ ሁለተኛ ደረጃ ት/ቤት" data-en=" General Secondary School"
+              data-om="Mana Barumsaa Sadarkaa 2ffaa Geelan">
+              <em data-en="Gelan" data-am="ገላን" data-om="Geelan">Gelan</em>
+              General Secondary School
+            </h3>
+
+            <p data-en="Welcome to Gelan General Secondary School." data-am="እንኳን ወደ ገላን 2ኛ ደረጃ ትምህርት ቤት በደህና መጡ።"
+              data-om="Baga gara Mana Barumsaa Sadarkaa Lammaffaa Gelan dhuftan.">
+            </p>
+
+            <p class="fst-italic" data-en="A Brief History of Gelan Secondary School."
+              data-am="የገላን 2ኛ ደረጃ ት/ቤት የታሪክ ጥቂት መግለጫ።"
+              data-om="Seenaa Gabaabaa Mana Barumsaa Sadarkaa Lammaffaa Gelan.">
+            </p>
+
+            <!-- Always-visible summary -->
+            <p data-en="Gelan General Secondary School, located in the dynamic area of Akaki Kality within the Gelan Condominium of Addis Ababa, Ethiopia, is a distinguished educational institution. Since its establishment in 2010 (Ethiopian Calendar), the school has become a vital part of the community, renowned for its dedication to academic excellence and holistic student development."
+              data-am="ገላን የከፍተኛ ትምህርት ቤት፣ በአዲስ አበባ አካባቢ ያለው በአቃቂ ካሊቲ ክልል ውስጥ በገላን ኮንዶሚኒየም ተገኝቷል። ከ2010 ዓ.ም. ጀምሮ፣ ወደ ማህበረሰቡ ዋና ክፍል ሆኖ ተወላጅ ሆኗል።"
+              data-om="Gelan Mana Barumsaa Sadarkaa Lammaffaa, naannoo dinamikii Akaki Kality keessatti, Kondominiyeemii Gelan, Finfinnee, Itoophiyaa keessatti argamti. Bara 2010 (Kalandara Itoophiyaa) hundaa’ee, hawaasa keessatti gahee guddaa qabaachaa dhufe.">
+            </p>
+
+            <!-- Collapsible extra content -->
+            <div class="collapse" id="moreContent">
+              <p data-en="Gelan General Secondary School provides a comprehensive curriculum that includes core subjects such as Mathematics, Science, English, and Social Studies, as well as electives like Art, Music, and Physical Education. The school is equipped with modern facilities, including state-of-the-art science laboratories, a computer lab, a well-stocked library, and sports grounds."
+                data-am="ገላን የከፍተኛ ትምህርት ቤት ትምህርት አጠቃላይ ትምህርቶችን ያቀርባል፤ ዋና ርዕሶች ማትማት፣ ሳይንስ፣ እንግሊዝኛ እና ማህበራዊ ጥናቶች እንዲሁም አርት፣ ሙዚቃ እና እጅ ጤና የሚሉ ተመራጮችን ይዟል። ተቋሙም ዘመናዊ ሳይንስ ላቦራቶሪዎች፣ ኮምፒውተር ላብ፣ ተስፋይ ቤተ-መፅሃፍት እና ስፖርት መስኮቶች ይዘዋል።"
+                data-om="Gelan Mana Barumsaa Sadarkaa Lammaffaa barnoota bal’inaa kenna; mata dureewwan bu’uuraa Herrega, Saayinsi, Ingiliffa fi Qorannoo Hawaasummaa akkasumas filannoo Art, Muuzika fi Leenjii Fayyaa of keessaa qaba. Mana barumsichis laaboraatorii saayinsii ammayyaa, laaboraatori kompiitaraa, maktabaa kitaabota guutame fi lafa tapha ispoortii qaba.">
+              </p>
+
+
+              <!-- Mission & Vision -->
+              <h3 data-en="Mission and Vision" data-am="ተልዕኮ እና ራዕይ" data-om="Kaayyoo fi Mul’ata" class="mt-3"></h3>
+              <ul>
+                <li
+                  data-en="Mission: To provide a nurturing and intellectually stimulating environment that fosters academic excellence, creativity, and personal growth among students."
+                  data-am="ተልዕኮ፡ ተማሪዎችን በጥራት የተሞላ፣ በፍላጎታቸው የተነሳ እና የግል እድገትን የሚያበረታታ አብዛኛው አካባቢ መፍጠር።"
+                  data-om="Kaayyoo: Naannoo of-eeggannoo fi sammuu kakaasu uumuudhaan barattoonni badhaadhina barnootaa, uumamaa fi guddina dhuunfaa akka argatan gochuu.">
+                </li>
+                <li
+                  data-en="Vision: To become a leading educational institution in Ethiopia, producing well-rounded, socially responsible, and innovative individuals equipped to meet future challenges."
+                  data-am="ራዕይ፡ በኢትዮጵያ ውስጥ የሚያወቀው የትምህርት ቤት ሆኖ በሙሉ የተሞላ፣ ማህበራዊ ተግባራዊነት ያለው እና ወደ ፊት የሚያስችለው ተማሪ የሚያወጣ።"
+                  data-om="Mul’ata: Mana barumsaa Itoophiyaa keessatti sadarkaa ol’aanaa ta’ee dhaloota bal’aa, itti gaafatamummaa hawaasummaa qabanii fi kaayyoo haaromsaa qaban oomishu.">
+                </li>
+              </ul>
+
+              <!-- Academic Programs -->
+              <h3 data-en="Academic Programs" data-am="የትምህርት ፕሮግራሞች" data-om="Sagantaalee Barnootaa" class="mt-3"></h3>
+              <ul>
+                <li data-en="Core Subjects: Mathematics, Science, English, Amharic, Social Studies."
+                  data-am="ዋና ርዕሶች፡ ማትማት፣ ሳይንስ፣ እንግሊዝኛ፣ አማርኛ፣ ማህበራዊ ጥናቶች።"
+                  data-om="Keewwata Ijoo: Herrega, Saayinsi, Ingiliffa, Amaariffa, Barnoota Hawaasummaa."></li>
+                <li data-en="Electives: Art, Music, Physical Education, Information Technology."
+                  data-am="ተመራጮች፡ አርት፣ ሙዚቃ፣ እጅ ጤና፣ ቴክኖሎጂ መረጃ።"
+                  data-om="Filannoo: Artii, Muziqa, Leenjii Fayyaa Qaamaa, Teknooloojii Odeeffannoo."></li>
+                <li
+                  data-en="Extracurricular Activities: Sports, clubs, community service projects, and cultural events."
+                  data-am="የተጨማሪ እንቅስቃሴዎች፡ ስፖርት፣ ክለቦች፣ የማህበረሰብ አገልግሎት ፕሮጀክቶች፣ ባህላዊ ተዘጋጆች።"
+                  data-om="Hojii Alaa Barnootaa: Ispoortii, kilabota, projektoota tajaajila hawaasaa, fi ayyaana aadaa.">
+                </li>
+              </ul>
+
+              <!-- Facilities -->
+              <h3 data-en="Facilities" data-am="ተቋማት" data-om="Qabeenya" class="mt-3"></h3>
+              <ul>
+                <li data-en="Classrooms: Spacious and well‑equipped." data-am="ክፍሎች፡ ሰፊ እና የተመሰረቱ።"
+                  data-om="Klassiroota: Bal’oo fi qopheeffamoo."></li>
+                <li data-en="Science Laboratories: State‑of‑the‑art labs." data-am="ሳይንስ ላቦራቶሪዎች፡ ዘመናዊ።"
+                  data-om="Laaboraatorii Saayinsii: Tekinooloojii haaraa qabu."></li>
+                <li data-en="Computer Lab: Latest technology." data-am="ኮምፒውተር ላብ፡ የአዲስ ቴክኖሎጂ።"
+                  data-om="Laaboraatorii Koompiitaraa: Teeknooloojii ammayyaa."></li>
+                <li data-en="Library: A rich collection of resources." data-am="ቤተ-መፅሃፍት፡ ባለ ብዙ ሀብት።"
+                  data-om="Maktaba: Qabeenya kitaabaa hedduu qabu."></li>
+                <li data-en="Sports Grounds: Facilities for football, basketball, and athletics."
+                  data-am="የስፖርት መስኮቶች፡ የእግር ኳስ፣ ቅርጫት ኳስ፣ እና ሌሎች ስፖርቶች ለማድረግ።"
+                  data-om="Lafoo Ispoortii: Tapha kubbaa miilaa, kubbaa harkaa fi ispoortii biroo."></li>
+              </ul>
+
+              <!-- Faculty -->
+              <h3 data-en="Faculty" data-am="አስተማሪዎች" data-om="Barsiisota" class="mt-3"></h3>
+              <p data-en="The dedicated and experienced faculty at Gelan General Secondary School are passionate about teaching and committed to student success. Regular professional development ensures that teachers stay updated with the latest educational practices."
+                data-am="በገላን 2ኛ ደረጃ ትምህርት ቤት ያሉት በሙያ የተሞላ፣ በትምህርት ላይ የተወደዱ እና ተማሪዎችን ለማግዛት በሚታመኑ አስተማሪዎች ናቸው። የተወሰነ የሙያ ልምድ ስለሚያገኙ አስተማሪዎች በዘመናዊ የትምህርት መልኩ ይማሩ።"
+                data-om="Barsiisotni Mana Barumsaa Sadarkaa Lammaffaa Gelan muuxannoo fi kutannoodhaan guutamanii, barnoota kennuuf hawwii qabanidha. Leenjii ogummaa yeroo yerootti taasifamuun barsiisotni mala barnootaa haaraa waliin qunnamtii taasisu.">
+              </p>
+
+              <!-- Community Engagement -->
+              <h3 data-en="Community Engagement" data-am="የማህበረሰብ ተሳትፎ" data-om="Hirmaannaa Hawaasaa" class="mt-3"></h3>
+              <ul>
+                <li data-en="Parent‑Teacher Associations: Regular meetings." data-am="የወላጅ‑መማሪ ማህበረሰብ፡ መደበኛ ስብሰባዎች።"
+                  data-om="Waldaa Maatii fi Barsiisota: Walga’ii yeroo yerootti gaggeeffamu."></li>
+                <li data-en="Community Service: Projects that develop social responsibility."
+                  data-am="የማህበረሰብ አገልግሎት፡ የማህበረሰብ ተግባራዊነትን የሚያስተላልፉ ፕሮጀክቶች።"
+                  data-om="Tajaajila Hawaasaa: Proojektoota itti gaafatamummaa hawaasaa guddisan."></li>
+                <li data-en="Collaborations: Partnerships with local organizations and businesses."
+                  data-am="መተባበርያዎች፡ ከአካባቢ ድርጅቶችና ንግዶች ጋር ባለ ጋራ ስራዎች።"
+                  data-om="Waliigaltee: Dhaabbilee fi daldaltoota naannoo waliin ta’uun."></li>
+              </ul>
+
+              <!-- Academic Achievements -->
+              <h3 data-en="Academic Achievements" data-am="የትምህርት ስኬቶች" data-om="Milkaa’ina Barnootaa" class="mt-3">
+              </h3>
+              <p data-en="Gelan General Secondary School consistently achieves high academic standards, as evidenced by students' performance in national examinations and extracurricular activities."
+                data-am="ገላን 2ኛ ደረጃ ትምህርት ቤት በብሔራዊ ፈተናዎች እና በተጨማሪ እንቅስቃሴዎች ውጤቶች በግልፅ መልኩ ከፍተኛ የትምህርት ደረጃ ያሳያል።"
+                data-om="Mana Barumsaa Sadarkaa Lammaffaa Gelan carraaqqii isaanii kanneen qorannoo biyyaalessaa fi hojii al-barnootaa irratti argatanin sadarkaa barnootaa olaanaa akka ga’an agarsiisa.">
+              </p>
+
+              <!-- Future Goals -->
+              <h3 data-en="Future Goals" data-am="የወደፊት ዕላማዎች" data-om="Kaayyoo Fuulduraa" class="mt-3"></h3>
+              <ul>
+                <li data-en="Expand Facilities: New classrooms, labs, and recreational areas."
+                  data-am="ተቋማትን ማስፋት፡ አዲስ ክፍሎች፣ ላቦራቶሪዎች እና የመዝገበ መዳን ቦታዎች።"
+                  data-om="Qabeenya babal’isu: Klassiroota, laaboraatorii fi iddoo bashannanaa haaromsuu."></li>
+                <li data-en="Innovate Curriculum: Advanced technology and new teaching methods."
+                  data-am="ትምህርት እቅድን ማደሻ፡ ዘመናዊ ቴክኖሎጂ እና አዲስ የማስተማሪያ ዘዴዎች።"
+                  data-om="Karoora barnootaa haaromsuu: Tekinooloojii fi mala baru haaraa dabaluu."></li>
+                <li data-en="Enhance Community Programs: Strengthen community involvement."
+                  data-am="የማህበረሰብ ፕሮግራሞችን ማሻሻል፡ የማህበረሰብ ተሳትፎን ማጠናከር።"
+                  data-om="Sagantaalee hawaasaa cimsuu: hirmaannaa hawaasaa jabeessuu."></li>
+                <li
+                  data-en="Foster Global Awareness: Prepare students to be global citizens through diverse and inclusive education."
+                  data-am="የዓለም ደረጃ ስሜት ማሳደግ፡ ተማሪዎችን በባህላዊና በሙሉ ተያያዥ ትምህርት በመካተት ዓለም ነዋሪዎች ለመዘጋጀት።"
+                  data-om="Beekumsa Addunyaa Guddisuu: barattoota karaa barnoota bal’inaan fi hammayyaa waliin qopheessuu.">
+                </li>
+              </ul>
+
+              <!-- Contact Information -->
+              <h3 data-en="Contact Information" data-am="የአገናኝ መረጃ" data-om="Odeeffannoo Quunnamtii" class="mt-3"></h3>
+              <ul>
+                <li data-en="Address: Gelan, Addis Ababa, Akaki Kality, Gelan Condominium, Ethiopia"
+                  data-am="አድራሻ፡ ገላን፣ አዲስ አበባ፣ አቃቂ ካሊቲ፣ ገላን ኮንዶሚኒየም፣ ኢትዮጵያ"
+                  data-om="Teessoo: Gelan, Finfinnee, Akaki Kality, Kondominiyeemii Gelan, Itoophiyaa"></li>
+                <li data-en="Phone: +251 912 982 915" data-am="ስልክ፡ +251 912 982 915"
+                  data-om="Bilbila: +251 912 982 915"></li>
+                <li data-en="Email: info.gelangeneralsecondaryschool@addislearning.edu.et"
+                  data-am="ኢሜይል፡ info.gelangeneralsecondaryschool@addislearning.edu.et"
+                  data-om="Imeeli: info.gelangeneralsecondaryschool@addislearning.edu.et"></li>
+                <li data-en="Telegram: @ggschoo" data-am="ተሌግራም፡ @ggschoo" data-om="Telegrame: @ggschoo"></li>
+              </ul>
+
+            </div>
+
+            <!-- Read More / Read Less button -->
+            <button class="btn btn-primary mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#moreContent"
+              aria-expanded="false" aria-controls="moreContent" data-en="Read More" data-am="ተጨማሪ አንብብ"
+              data-om="Dabalata Dubbisi">
+            </button>
+
+          </div>
         </div>
 
       </div>
-    </section><!-- End Services Section -->
+    </section>
 
+
+    <!--
+Start Counter Section
+==================================== -->
+    <section class="about">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-xl-8 col-lg-10 text-center">
+            <div class="title">
+              <h2 class="section-title" data-en="Academic Excellence" data-am="የትምህርት ጥራት"
+                data-om="Qorannoowwan Guddinaa">
+                Academic Excellence
+              </h2>
+              <p class="lead"
+                data-en="Gelan General Secondary School consistently demonstrates academic excellence through high performance in national examinations..."
+                data-am="ገላን አጠቃላይ ሁለተኛ ደረጃ ትምህርት ቤት በብሄራዊ ፈተናዎች እና ውድድሮች ከፍተኛ ውጤቶችን ያሳያል..."
+                data-om="Mana Barumsa Sadarkaa 2ffaa Geelan qormaata guddaa qaba...">
+                Gelan General Secondary School consistently demonstrates academic excellence...
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- Students -->
+          <div class="col-md-3 col-sm-6 mb-4 text-center">
+            <div class="counters-item p-4 shadow-sm hover-effect">
+              <i class="bi bi-people-fill fs-1 text-primary mb-3" aria-hidden="true"></i>
+              <div class="counter display-5 fw-bold text-dark" data-count="1421" aria-label="Total students">
+                <b>0</b>
+              </div>
+              <h3 class="h5 mt-2" data-en="Students" data-am="ተማሪዎች" data-om="Barattoota">
+                Students
+              </h3>
+            </div>
+          </div>
+
+          <!-- Leadership -->
+          <div class="col-md-3 col-sm-6 mb-4 text-center">
+            <div class="counters-item p-4 shadow-sm hover-effect">
+              <i class="bi bi-award-fill fs-1 text-success mb-3" aria-hidden="true"></i>
+              <div class="counter display-5 fw-bold text-dark" data-count="4" aria-label="School principals">
+                <b>0</b>
+              </div>
+              <h3 class="h5 mt-2" data-en="Leadership" data-am="ሊደራሽ" data-om="Hoggantoota">
+                Leadership
+              </h3>
+            </div>
+          </div>
+
+          <!-- Faculty -->
+          <div class="col-md-3 col-sm-6 mb-4 text-center">
+            <div class="counters-item p-4 shadow-sm hover-effect">
+              <i class="bi bi-mortarboard-fill fs-1 text-warning mb-3" aria-hidden="true"></i>
+              <div class="counter display-5 fw-bold text-dark" data-count="105" aria-label="Teaching staff">
+                <b>0</b>
+              </div>
+              <h3 class="h5 mt-2" data-en="Faculty" data-am="አስተማሪዎች" data-om="Barumsaaf">
+                Faculty
+              </h3>
+            </div>
+          </div>
+
+          <!-- Support Staff -->
+          <div class="col-md-3 col-sm-6 mb-4 text-center">
+            <div class="counters-item p-4 shadow-sm hover-effect">
+              <i class="bi bi-briefcase-fill fs-1 text-info mb-3" aria-hidden="true"></i>
+              <div class="counter display-5 fw-bold text-dark" data-count="37" aria-label="Support staff">
+                <b>0</b>
+              </div>
+              <h3 class="h5 mt-2" data-en="Support Staff" data-am="የድጋፍ ሠራተኞች" data-om="Tajaajila Gargaarsaa">
+                Support Staff
+              </h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-12 text-center">
+            <p class="text-muted small" data-en="Data as of 2025 E.C" data-am="የ2017 ዓ.ም. ዳታ" data-om="Oduu 2025 E.C">
+              2025 E.C
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .hover-effect {
+        transition: all 0.3s ease;
+        border-radius: 8px;
+      }
+
+      .hover-effect:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .counter {
+        font-family: 'Roboto', sans-serif;
+        color: #2c3e50;
+      }
+
+      .bi {
+        vertical-align: middle;
+      }
+    </style>
+
+    <script>
+      // Counter animation
+      document.addEventListener('DOMContentLoaded', () => {
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+
+        const animateCounters = () => {
+          counters.forEach(counter => {
+            const updateCount = () => {
+              const target = +counter.getAttribute('data-count');
+              const count = +counter.innerText;
+              const inc = target / speed;
+
+              if (count < target) {
+                counter.innerText = Math.ceil(count + inc);
+                setTimeout(updateCount, 1);
+              } else {
+                counter.innerText = target + '+';
+              }
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+              if (entries[0].isIntersecting) {
+                updateCount();
+              }
+            });
+
+            observer.observe(counter);
+          });
+        }
+
+        animateCounters();
+      });
+    </script>
     </section><!-- End Why Us Section -->
 
     <!-- ======= Features Section ======= -->
     <section class="features">
       <div class="container">
-
         <div class="section-title">
-          <h2>Acadamic</h2>
-          <p></p>
+          <h2 data-en="Academic" data-am="ትምህርታዊ" data-om="Barumsaa">Academic</h2>
         </div>
 
         <div class="row" data-aos="fade-up">
           <div class="col-md-5">
-            <img src="assets/img/features-1.svg" class="img-fluid" alt="">
+            <img src="assets/All/images/DDDDDD.JPG" class="img-fluid" alt="Principal's Office"
+              data-en="Principal's Office" data-am="የርዕሰ መምህር ቢሮ" data-om="Biroo Paarlaamaa">
           </div>
           <div class="col-md-7 pt-4" id="section2">
-            <p>Derartu Tulu Secondary School</p>
-            <h3>Principal<br>ርዕሰ መምህር ቢሮ ቁጥር: 01</h3>
-            <p> Name: <a href=""><em> Ato Aschalaw Hailu Asefa</a></em></p>
-            <p class="fst-italic">
-              The <em>Principal</em> is the highest-ranking administrator in a school and is responsible for
-              overseeing all aspects of its operation. Their role includes setting the school's vision and goals,
-              creating policies and procedures to support student learning and well-being, managing budgets and
-              resources, hiring and evaluating staff, maintaining relationships with stakeholders (parents, community
-              members, etc.), and ensuring compliance with regulations. Ultimately, the principal's aim is to create a
-              safe, supportive, and effective learning environment where students can thrive academically, socially, and
-              emotionally...</li>
+            <p data-en="Gelan General Secondary School" data-am="ገላን አጠቃላይ ሁለተኛ ደረጃ ትምህርት ቤት"
+              data-om="Mana Barumsaa Sadarkaa 2ffaa Geelan">
+              Gelan General Secondary School
             </p>
-            <a href="" class="btn">More</a>
-          </div>
-        </div>
 
-        <div class="row" data-aos="fade-up">
-          <div class="col-md-5 order-1 order-md-2">
-            <img src="assets/img/features-2.svg" class="img-fluid" alt="">
-          </div>
-          <div class="col-md-7 pt-5 order-2 order-md-1">
-            <p>Derartu Tulu Secondary School</p>
-            <h3>Vice Principal of Teaching and Learning
-              <p>የመማር ማስተማር ም/ር/መ/ር ቢሮ ቁጥር: 02</p>
+            <h3 data-en="School Principal" data-am="ርዕሰ መምህር" data-om="Paarlaamaa Mana Barumsaa">
+              School Principal
             </h3>
-            <p> Name: <a href="#"><em>Ato Hailemariam Kende Allen</em></a></p>
-            <p class="fst-italic">
-              This position typically focuses on curriculum development,
-              instructional leadership, and student achievement. Responsibilities may include supervising and evaluating
-              teachers, designing and implementing curriculum initiatives, analyzing student data to inform
-              instructional practices, coordinating standardized testing and assessment programs, and supporting
-              teachers in their professional growth and development. The vice principal of teaching and learning plays a
-              crucial role in ensuring that high-quality instruction is delivered consistently across all classrooms and
-              that students are making progress toward academic goals...
-            </p>
-            <a href="" class="btn">More</a>
-          </div>
-        </div>
-        <div class="row" data-aos="fade-up">
-          <div class="col-md-5">
-            <img src="assets/img/features-3.svg" class="img-fluid" alt="">
-          </div>
-          <div class="col-md-7 pt-5">
-            <p>Derartu Tulu Secondary School</p>
-            <h3>V/Principal of School Improvement<br>
-              <p>የትምህርት ቤት መሻሻል ም/ር/መ/ር </p>
-            </h3>
-            <p> Name: <a href=""><em>Ato Chala Terfe Muleta</em></a></p>
-            <p class="fst-italic">This role is often dedicated to leading
-              efforts to improve the overall quality and performance of the school. Responsibilities may include
-              analyzing school data to identify strengths and areas for growth, developing and implementing school
-              improvement plans, monitoring progress toward goals, coordinating professional development for staff,
-              fostering a positive school culture, and engaging with stakeholders to build support for improvement
-              initiatives. The vice principal of school improvement works collaboratively with the principal and other
-              administrators to drive positive change and enhance the educational experience for students...
-            </p>
-            <a href="" class="btn">More</a>
-          </div>
-        </div>
-
-        <div class="row" data-aos="fade-up">
-          <div class="col-md-5 order-1 order-md-2">
-            <img src="assets/img/features-4.svg" class="img-fluid" alt="">
-          </div>
-          <div class="col-md-7 pt-5 order-2 order-md-1">
-            <p>Derartu Tulu Secondary School</p>
-            <h4> Teacher Development and School <br>Administration V/Principa<br>
-              <p>የመ/ት/አ/ል/ም/ር/መ/ር</p>
-            </h4>
-            <p> Name: <a href=""><em>Ato Kebede Beyene Gandaba</em></a></p>
-            <p class="fst-italic">This position
-              typically combines responsibilities related to both teacher development and school administration. On the
-              teacher development side, the vice principal may oversee professional development programs, mentor new
-              teachers, facilitate collaboration among instructional staff, and provide support and resources to enhance
-              teaching effectiveness. On the school administration side, responsibilities may include managing school
-              schedules and resources, handling disciplinary issues, liaising with parents and community members, and
-              assisting with day-to-day operational tasks. The goal of this role is to support both the professional
-              growth of teachers and the smooth functioning of the school as a whole...
-            </p>
-            <a href="" class="btn">More</a>
-          </div>
-        </div>
-
-
-
-
-        <div class="row" data-aos="fade-up">
-          <div class="col-md-5">
-            <img src="assets/img/features-3.svg" class="img-fluid" alt="">
-          </div>
-          <div class="col-md-7 pt-5">
-            <p>Derartu Tulu Secondary School</p>
-            <h3>Liberary<br>
-              <p> የተማሪ ማንበባ ክፍል ቢሮ ቁጥር：08</p>
-            </h3>
-            <p>The <em>library</em> serves as a resource center for both students and teachers. Its primary
-              purpose is to support learning and academic achievement by providing access to a wide range of educational
-              materials, including books, magazines, newspapers, reference materials, and digital resources. In addition
-              to offering a quiet space for reading and studying, libraries often provide research assistance, computer
-              workstations, printing and copying services, and opportunities for collaborative learning. The library
-              also plays a role in promoting literacy, fostering a love of reading, and encouraging lifelong learning
-              among students...</p>
-            <a href="" class="btn">More</a>
-          </div>
-        </div>
-
-        <div class="row" data-aos="fade-up">
-          <div class="col-md-5 order-1 order-md-2">
-            <img src="assets/img/features-4.svg" class="img-fluid" alt="">
-          </div>
-          <div class="col-md-7 pt-5 order-2 order-md-1">
-            <p>Derartu Tulu Secondary School</p>
-            <h3>IT Room of Teachers<br>
-              <p>ፋይናስ ቢሮ ቁጥር: 05</p>
-            </h3>
-            <p class="fst-italic">
-              This facility is designed to support teachers in integrating technology into
-              their instructional practices and professional development. It typically provides access to computers,
-              software, and other digital tools that teachers can use to create instructional materials, communicate
-              with students and parents, conduct research, and collaborate with colleagues. IT rooms for teachers may
-              also offer training sessions, workshops, and resources to help educators enhance their technology skills
-              and effectively integrate technology into the curriculum. The goal is to empower teachers to use
-              technology as a tool to enhance teaching and learning outcomes.
-
-            </p>
-            <a href="" class="btn">More</a>
-          </div>
-        </div>
-        <div class="row" data-aos="fade-up">
-          <div class="col-md-5">
-            <img src="assets/img/features-3.svg" class="img-fluid" alt="">
-          </div>
-          <div class="col-md-7 pt-5">
-            <p>Derartu Tulu Secondary School</p>
-            <h3>IT Room of Student<br>
-              <p> የተማሪ ማንበባ ክፍል ቢሮ ቁጥር：08</p>
-            </h3>
-            <p>Similar to the IT room for teachers, the IT room for students is a dedicated
-              space equipped with computers, software, and other technology resources to support students' learning and
-              academic activities. Students can use the IT room to conduct research, complete assignments, access
-              digital learning materials, collaborate on projects, and develop technology skills. IT rooms for students
-              may also provide internet access, printing and scanning services, and technical support to help students
-              navigate technology-related challenges. The goal is to ensure that all students have equitable access to
-              technology resources and opportunities to develop the digital literacy skills they need for success in
-              school and beyond.
-            </p>
-            <a href="" class="btn">More</a>
-          </div>
-        </div>
-
-
-        <section class="pricing section-bg" data-aos="fade-up">
-          <div class="container">
-
-            <div class="section-title">
-              <h2>Services</h2>
+            <div class="card-meta mb-3">
+              <span class="badge bg-primary" data-en="Office Number: 01" data-am="ቢሮ ቁጥር: 01"
+                data-om="Lakkoofsa Manaa: 01">
+                Office #01
+              </span>
             </div>
-            <a href="./Service of  website/Translator App/index.html" class="btn1">Translator</a>
-            <a href="./Service of  website/Chatbot_ AIb/index.html" class="btn1">ChatGPT Free</a>
-            <a href="./Service of  website/Dark_and_Light_Themed_Calculator.io-main/index.html"
-              class="btn1">Calculator</a>
-            <a href="./Service of  website/weather-app-js-master/index.html" class="btn1">Weather</a>
-            <a href="./Service of  website/2048 Game/index.html" class="btn1">Game</a>
-            <a href="" class="btn1">Student Result</a>
+            <h4 class="h5" data-en="Mr. Gashaw Alganeh Menesha" data-am="አቶ ጋሻው አልጋነህ መነሻ"
+              data-om="Obbo Gashaw Alganeh Menesha">
+              Gashaw Alganeh Menesha
+            </h4>
+            <p data-en="The school is committed to academic excellence and character development. The leadership of Mr. Gashaw Alganeh Menesha has brought a renewed focus on inclusive education, teacher development, and student well-being. Under his guidance, the school has implemented a range of initiatives aimed at fostering innovation, discipline, and community engagement. These include student mentorship programs, parent-teacher partnerships, and regular academic assessments to monitor progress and address learning gaps."
+              data-am="ትምህርቱ በትምህርት እና በባህላዊ አመጣጥ ታማኝነቱን ያሳያል። አቶ ጋሻው አልጋነህ መነሻ እንዲህ ዓይነት አመራር በትምህርት ቤቱ ውስጥ አዲስ አሃድና እንክብካቤ እንዲደርስ አስተዋወቀ። እነዚህ መካከል የተማሪ መከታተያ ፕሮግራሞች፣ የወላጅ-መምህር ቅዳሜዎችና የመደበኛ የትምህርት አሰሳ እቅዶች አሉ።"
+              data-om="Mana barumsichi sadarkaa barnootaa fi guddina amalaatiin beekamaadha. Hoogganummaa Obbo Gashaw Alganeh Menesha jalatti barnootni walqixa kennamu, leenjii barsiisotaa fi fayyaa barattootaa irratti xiyyeeffannoon kennameera. Innis pirojektoota hedduu kan akka gorsaa barattootaa, walitti dhufeenya maatii fi barsiisotaa fi qorannoo barnoota bifa barattoota waliin geggeeffamu labsuudhaan dhufeera.">
+            </p>
+
+            <p class="fst-italic"
+              data-en="The Principal is the highest-ranking administrator in a school and is responsible for overseeing all aspects of its operation. Their role includes setting the school's vision and goals, creating policies and procedures to support student learning and well-being, managing budgets and resources, hiring and evaluating staff, maintaining relationships with stakeholders (parents, community members, etc.), and ensuring compliance with regulations. Ultimately, the principal's aim is to create a safe, supportive, and effective learning environment where students can thrive academically, socially, and emotionally."
+              data-am="ርዕሰ መምህሩ በትምህርት ቤቱ ውስጥ ከፍተኛው አስተዳደር ነው። በትምህርት ቤቱ አሠራር ሁሉ ላይ ኃላፊነት ይይዛል። የትምህርት ቤቱን ራዕይ እና ግቦች ማዘጋጀት፣ የተማሪዎችን ትምህርት እና ደህንነት የሚደግፉ ፖሊሲዎችን ማውጣት፣ በጀት እና ሀብቶችን ማስተዳደር፣ ሠራተኞችን መቅጠር እና መገምገም፣ ባለድርሻ አካላት (ወላጆች፣ የማህበረሰብ አባላት፣ ወዘተ) ጋር ያለውን ግንኙነት ማቆየት፣ እና ደንቦችን መገዝ ማረጋገጥ የሚጨምሩ ተግባራትን ያካትታል። ዋናው ግብ ተማሪዎች በትምህርታዊ፣ ማህበራዊ እና ስሜታዊ ሁኔታ የሚያድጉበት ደህንነቱ የተጠበቀ የትምህርት አካባቢ ማመቻቸት ነው።"
+              data-om="Paarlaamaan  mana barumsaa keessatti hoggana guddaadha. Hojii isaa hunda harkaa qabu: kaayyoo mana barumsaa sirreessuu, dambiiwwan barattootaaf fayyadamaa fi kabajaa qabu uumu, qabeenyaa fi maallaqa bulchuu, hojjettoota filuu fi qorannoo, waajjiraalee (maatii, hawaasa, fi kkf) waliin walqunnamtii kabajuu, fi dambiiwwan mana barumsaa guutummaatti eeguu. Kaayyoo guddaan qe'ee barumsa nagaa fi gammachuudhaan barattoonni barsiisaa, hawaasaafi lubbuu isaanii keessatti guddatan taasisuu dha.">
+              The <em>Principal</em> is the highest-ranking administrator in a school and is responsible for overseeing
+              all aspects of its operation...
+            </p>
+
+            <a href="#!" class="btn" data-en="Learn More" data-am="ተጨማሪ ይወቁ" data-om="Dabalataan Barraa">
+              More
+            </a>
           </div>
-        </section>
+        </div>
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5 order-1 order-md-2">
+            <img src="assets/All/images/v2.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-5 order-2 order-md-1">
+            <p data-en="Gelan General Secondary School" data-am="ገላን አጠቃላይ ሁለተኛ ደረጃ ትምህርት ቤት"
+              data-om="Mana Barumsaa Sadarkaa 2ffaa Geelan">
+              Gelan General Secondary School
+            </p>
+            <h3 class="card-title">
+              <h3 class="text-decoration-none" data-en="Vice Principal" data-am="ምክትል ርዕሰ መምህር"
+                data-om="Itti Aanaa Hogganaafi Itti gaafatamaa Fooya'insa mana barumsaa">
+                SL.P.V/Principal
+              </h3>
+              <div class="card-meta mb-3">
+                <span class="badge bg-primary" data-en="Office Number: 02" data-am="ቢሮ ቁጥር: 02"
+                  data-om="Lakkoofsa Manaa: 02">
+                  Office #02
+                </span>
+              </div>
+              <h4 class="h5" data-en="Mr. Temesgen Gemeda Emana " data-am="አቶ ዓለሙ ኃይለ ዋኮ"
+                data-om="Obbo Alemu Haile Wako">
+                Temesgen Gemeda Emana
+              </h4>
+
+              <p class="fst-italic"
+                data-en="This position typically focuses on curriculum development, instructional leadership, and student achievement. Responsibilities may include supervising and evaluating teachers, designing and implementing curriculum initiatives, analyzing student data to inform instructional practices, coordinating standardized testing and assessment programs, and supporting teachers in their professional growth and development. The vice principal of teaching and learning plays a crucial role in ensuring that high-quality instruction is delivered consistently across all classrooms and that students are making progress toward academic goals..."
+                data-am="ይህ ቦታ በተለምዶ በትምህርት እቅድ እንዲሁም በትምህርት መሪነት እና በተማሪዎች ውጤት ላይ ያተኮራል። ኃላፊነቶቹ ከሚካተቱት በተለምዶ አስተማሪዎችን መቆጣጠርና መገምገም፣ የትምህርት እቅዶችን እንዲደረጉና እንዲተገበሩ ማድረግ፣ የተማሪዎችን ውሂብ በትምህርት ልምዶች ላይ ያሳያል በማለት መተንተን፣ የመደበኛ ፈተናዎችንና የግምገማ ፕሮግራሞችን ማስተካከል፣ እና አስተማሪዎችን በየሙያቸው እድገት ማግኘታቸውን በመደገፍ ሊሆን ይችላል። የትምህርትና መማር ዋና አስተባባሪ ከፍተኛ ጥራት ያለው ትምህርት በሁሉም ክፍሎች እንዲሰጥ እና ተማሪዎች በትምህርታዊ ግብ እንዲደግፉ አስፈላጊ ሚና ይላቸዋል።"
+                data-om="Teessumni kun barnoota qopheessuu, hoggansa barsiisotaa fi milkaa’ina barattootaa irratti xiyyeeffata. Hojiiwwan dabalataa keessatti barsiisota to’achuu fi madaaluu, karoora barnootaa qopheessuu fi hojiirra oolchu, odeeffannoo barattootaa qo’achuu fi bu’a qabeessa taasisuu, qorannoo fi sirna madaallii qindeesuu, akkasumas barsiisota guddina ogummaa isaaniif deggaruu ni dabalata. Itti-aanaa pirezidaantii barnootaa fi barsiisuu tajaajila barnootaa sadarkaa olaanaa fi gahumsaan kennamuu mirkaneessuuf gahee olaanaa taphata – akkasumas barattoonni bu’aa argachaa jiru akka mirkanaa’u godha...">
+                This position typically focuses on curriculum development, instructional leadership, and student
+                achievement. Responsibilities may include supervising and evaluating teachers, designing and
+                implementing curriculum initiatives, analyzing student data to inform instructional practices,
+                coordinating standardized testing and assessment programs, and supporting teachers in their professional
+                growth and development. The vice principal of teaching and learning plays a crucial role in ensuring
+                that high-quality instruction is delivered consistently across all classrooms and that students are
+                making progress toward academic goals...
+              </p>
+              <a href="#!" class="btn" data-en="Learn More" data-am="ተጨማሪ ይወቁ" data-om="Dabalataan Barraa">
+                More
+              </a>
+          </div>
+        </div>
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5">
+            <img src="assets/All/images/v3.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-5">
+            <p data-en="Gelan General Secondary School" data-am="ገላን አጠቃላይ ሁለተኛ ደረጃ ትምህርት ቤት"
+              data-om="Mana Barumsaa Sadarkaa 2ffaa Geelan">
+              Gelan General Secondary School</p>
+
+            <h3 href="curriculum.html" class="text-decoration-none" data-en="Curriculum VP" data-am="የትምህርት አሰጣጥ ምክትል"
+              data-om="Qorannoo Hoggansa Lixa">
+              Curriculum Implementation VP
+            </h3>
+            <div class="card-meta mb-3">
+              <span class="badge bg-primary" data-en="Office Number: 02" data-am="ቢሮ ቁጥር: 02"
+                data-om="Lakkoofsa Manaa: 02">
+                Office #02
+              </span>
+            </div>
+            </h3>
+            <h4 class="h5" data-en="Mr. Kumelachew Shitie Mengistie" data-am="አቶ ኩመላቸው ሺተ መንግስቴ"
+              data-om="Obbo Kumelachew Shitie Mengistie">
+              Kumelachew Shitie Mengistie
+            </h4>
+            <p class="fst-italic"
+              data-en="This role is often dedicated to leading efforts to improve the overall quality and performance of the school. Responsibilities may include analyzing school data to identify strengths and areas for growth, developing and implementing school improvement plans, monitoring progress toward goals, coordinating professional development for staff, fostering a positive school culture, and engaging with stakeholders to build support for improvement initiatives. The vice principal of school improvement works collaboratively with the principal and other administrators to drive positive change and enhance the educational experience for students..."
+              data-am="ይህ ሚና በተለምዶ የትምህርቱን ጥራትና አፈፃፀም በአጠቃላይ ለማሻሻል የሚደረጉ ጥረቶችን ለመመራት ይታወቃል። ኃላፊነቶቹ የትምህርት ቤቱን ውሂብ በመተንተን ኃይሎችንና የማሻሻል አካላትን ማስፈንጠር፣ የትምህርት ቤቱን እድገት እቅዶችን መንደርና ማስፈንጠር፣ ዕቅፍ ያለውን እድገት ለመከታተል፣ ለሰራተኞች የሙያ እድገት ማቀናበር፣ አዎንታዊ የትምህርት ቤት ባህልን ማበረታታትና የአስተዳደር አካላትን ማሳተፍ የሚያካትቱ ሊሆኑ ይችላሉ። የትምህርት ቤቱን እድገት የሚተባበሩት የአስተባባሪነት አስተባባሪ ከምእመናንና ከሌሎች አስተዳደር አባላት ጋር በተባባሪነት እርምጃ በመውሰድ አዎንታዊ ለውጦችን ማምጣትና ለተማሪዎች የትምህርት ተሞክሮን ለማሻሻል አስፈላጊ ሚና ይጫወታል።"
+              data-om="Gaheen kun yeroo baay’ee hojiiwwan qulqullina fi raawwii manneen barnootaa fooyyessuuf godhaman hoogganuuf qofa oola. Hojiiwwan gurguddoon isaa odeeffannoo mana barumsaa qo’achuu fi jabinaa fi hanqina adda baasuu, karoora fooyya’insaa qopheessuu fi hojii irra oolchu, adeemsa karooraa hordofuu, leenjii ogummaa qindeessuu, aadaa mana barumsaa tolaa jabeessuu fi miseensota hawaasaa waliin qindoominaan hojjechuun deeggarsa argamsiisuu dabalata. Itti-aanaan pirezidaantii fooyya’insaa qindoominaan hooggantoota biroo waliin hojjechuun jijjiirama bu’a qabeessa fiduu fi barattootaaf muuxannoo barnootaa fooyya'aa gochuu irratti gahee olaanaa taphata...">
+              This role is often dedicated to leading efforts to improve the overall quality and performance of the
+              school. Responsibilities may include analyzing school data to identify strengths and areas for growth,
+              developing and implementing school improvement plans, monitoring progress toward goals, coordinating
+              professional development for staff, fostering a positive school culture, and engaging with stakeholders to
+              build support for improvement initiatives. The vice principal of school improvement works collaboratively
+              with the principal and other administrators to drive positive change and enhance the educational
+              experience for students...
+            </p>
+            <a href="#!" class="btn" data-en="Learn More" data-am="ተጨማሪ ይወቁ" data-om="Dabalataan Barraa">
+              More
+            </a>
+
+          </div>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5 order-1 order-md-2">
+            <img src="assets/All/images/v4.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-5 order-2 order-md-1">
+            <p data-en="Gelan General Secondary School" data-am="ገላን አጠቃላይ ሁለተኛ ደረጃ ትምህርት ቤት"
+              data-om="Mana Barumsaa Sadarkaa 2ffaa Geelan">
+              Gelan General Secondary School</p>
+
+            <h3 class="card-title" data-en="TDP Vice principal" data-am="የመምህራን ልማት ምክትል"
+              data-om="Qorannoo Barumsaa Hoggansa Lixa">
+              TDP.V/Principal
+            </h3>
+            <div class="card-meta mb-3">
+              <span class="badge bg-primary" data-en="Office Number: 02" data-am="ቢሮ ቁጥር: 02"
+                data-om="Lakkoofsa Manaa: 02">
+                Office #02
+              </span>
+            </div>
+            <h4 class="h5" data-en="Mr. Yimam Seid Ali" data-am="አቶ ይማም ሰይድ አሊ" data-om="Obbo Yimam Seid Ali">
+              Yimam Seid Ali
+            </h4>
+            <p class="fst-italic"
+              data-en="This position typically combines responsibilities related to both teacher development and school administration. On the teacher development side, the vice principal may oversee professional development programs, mentor new teachers, facilitate collaboration among instructional staff, and provide support and resources to enhance teaching effectiveness. On the school administration side, responsibilities may include managing school schedules and resources, handling disciplinary issues, liaising with parents and community members, and assisting with day-to-day operational tasks. The goal of this role is to support both the professional growth of teachers and the smooth functioning of the school as a whole..."
+              data-am="ይህ ቦታ በአስተማሪዎች እድገትና ትምህርት ቤት አስተዳደር ስለሚሆን ተግባራዊ ኃላፊነቶችን በሁሉም ክፍል ያካትታል። በአስተማሪ እድገት በተለምዶ እንዲሆን፣ እሱ እቅድ እና ማማከር የሚሆኑ ስለሆነ፣ አዳዲስ አስተማሪዎችን እንዲከታተሉ፣ በትምህርት ሰራተኞች መካከል ስምምነትን ማሳደግ፣ እንዲሁም አስተማሪነት ስራ ስለሚቀንስ ድጋፍና ምንጭ ተደርጎ መስጠት፣ በስራ እስከምንጭ እና በአስተማሪ ትምህርት ተመን እና ትምህርት ቤት ሁሉም እንዲከናወኑ ይችላሉ። በአስተዳደር ስምምነት፣ ሙሉ መታወቂያ እና አስተዳደር ያሉት ድርጅት እንዲታደርጉ በማሳሰብ አስተዳደር ስምምነት፣ በመሀከል መንገድን እንዲደግፍ የተማሪዎችን እና ተመን ተመን ሁሉ፣ አስተማሪ በትምህርት ቤት ሁሉ።"
+              data-om="Teessumni kun gargaarsa hojiiwwan barsiisota fi bulchiinsa mana barnootaa walitti fiduuf qindoominaan hojjeta. Qooda barsiisota irratti, itti-aanaan pirezidaantii tajaajilaa hojiiwwan leenjii fi guddina barsiisota hordofuu, barsiisota haaraa gorsa kennuu, waliin hojjechuu fi cimsuu, fi deeggarsa fi maddaalee barsiisotaa fooyyeessuu ni dabalata. Qooda bulchiinsa mana barnootaa irratti immoo, hojiiwwan dabalataa keessaa guyyaa manaa fi qabeenya hojiirra oolchuu, rakkoo sirreessuuf, maatii fi miseensota hawaasaa waliin hojjechuun, akkasumas hojiiwwan guyyaa-guyyaa hojiirra oolmaa mana barnootaa keessatti gargaaruu ni dabalata. Kaayyoon hojii kanaa, guddina ogummaa barsiisotaa fi hojiiwwan mana barnootaa gaarii fi fooyya'aa akka ta'u gochuu dha...">
+              This position typically combines responsibilities related to both teacher development and school
+              administration. On the teacher development side, the vice principal may oversee professional development
+              programs, mentor new teachers, facilitate collaboration among instructional staff, and provide support and
+              resources to enhance teaching effectiveness. On the school administration side, responsibilities may
+              include managing school schedules and resources, handling disciplinary issues, liaising with parents and
+              community members, and assisting with day-to-day operational tasks. The goal of this role is to support
+              both the professional growth of teachers and the smooth functioning of the school as a whole...
+            </p>
+
+            <a href="#!" class="btn" data-en="Learn More" data-am="ተጨማሪ ይወቁ" data-om="Dabalataan Barraa">
+              More
+            </a>
+          </div>
+        </div>
+
+
+
+        <section class="why-us section-bg" data-aos="fade-up" data-aos-delay="200">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-6 video-box">
+                      <!-- Fallback Image -->
+                     
+                      
+                      <!-- Embedded Video Iframe -->
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="100%" height="360" src="https://www.youtube.com/embed/VWZ7WYYaTzo"
+                        title="February 24, 2024" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                      </div>
+                  </div>
+      
+              <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
+                <div class="icon-box">
+                  <div class="icon"><i class="bx bx-fingerprint"></i></div>
+                  <h4 class="title">
+                    <a href="" data-en="Watch the video to learn more about Gelan General Secondary School"
+                      data-am="ቪዲዮውን ተመልከት ስለ ገላን አጠቃላይ ሁለተኛ ደረጃ ትምህርት ቤት  ተጨማሪ ለመረዳት"
+                      data-om="Viidiyoo kana daawwadhaa waan dabalataan Mana Barumsaa Sadarkaa 2ffaa Geelan irratti barachuuf">
+                      Watch Our School Video
+                    </a>
+                  </h4>
+                  <p class="description"
+                    data-en="Gelan General Secondary School provides modern learning spaces and environments designed to foster academic excellence and personal growth."
+                    data-am="ገላን አጠቃላይ ሁለተኛ ደረጃ ትምህርት ቤት ዘመናዊ የትምህርት ቦታዎችን እና አካባቢዎችን በመስጠት የትምህርት እብሪት እና የግል እድገት ያበረታታል።"
+                    data-om="Mana Barumsaa Geelan bakkoo barumsaa haaraa fi qe'ee barumsa guddaa qabuun barattootaaf barsiisa gaarii fi guddina lubbuu isaanii kabajaa kennudha.">
+                    Our educational institution offers innovative learning environments for student success.
+                  </p>
+                </div>
+
+                <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                  <div class="icon">
+                      <!-- Updated to eye icon for better semantic meaning -->
+                      <i class="bx bx-show" 
+                         aria-hidden="true"
+                         data-en-alt="View Icon"
+                         data-am-alt="የእይታ አዶ"
+                         data-om-alt="Ibsa Daawwannoo"></i>
+                  </div>
+                  <div class="content">
+                      <h4 class="title h5">
+                          <a href="/gallery" 
+                             class="text-decoration-none"
+                             data-en="View Gallery"
+                             data-am="ፎቶ ማህደር ይመልከቱ"
+                             data-om="Gaaleerii Daawwachu"
+                             aria-label="View school gallery">
+                              View Gallery
+                          </a>
+                      </h4>
+                      <p class="description mb-0"
+                         data-en="Explore our school facilities and activities"
+                         data-am="የትምህርት ቤታችን መሳሪያዎች እና እንቅስቃሴዎችን ይመልከቱ"
+                         data-om="Qopheessaa fi hojiiwwan mana barumsaa keenya ilaalaa">
+                          Discover our campus
+                      </p>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </section><!-- End #main -->
+
       </div>
       </div>
     </section><!-- End Features Section -->
@@ -406,84 +949,102 @@
     <!-- ======= Tetstimonials Section ======= -->
     <section class="testimonials" data-aos="fade-up">
       <div class="container">
-
-        <div class="section-title">
-          <h2>Admin </h2>
-
-        </div>
-
-        <div class="testimonials-carousel swiper">
-          <div class="swiper-wrapper">
-            <div class="testimonial-item swiper-slide">
-              <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-              <h3>Abel Mesfin</h3>
-              <h4>Ceo &amp; Founder</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium
-                quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-
-            <div class="testimonial-item swiper-slide">
-              <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-              <h3>Yabsira</h3>
-              <h4>Designer</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis
-                quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-
-            <div class="testimonial-item swiper-slide">
-              <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-              <h3>Abel </h3>
-              <h4>Store Owner</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor
-                labore quem eram duis noster aute amet eram fore quis sint minim.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-
-            <div class="testimonial-item swiper-slide">
-              <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-              <h3>Abel </h3>
-              <h4>Freelancer</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim
-                dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-
-            <div class="testimonial-item swiper-slide">
-              <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-              <h3>Abel</h3>
-              <h4>Entrepreneur</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa
-                labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
+          <div class="section-title">
+              <h2 data-en="Administration" 
+                  data-am="አስተዳደር"
+                  data-om="Bulchiinsa">
+                  Administration
+              </h2>
           </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
+  
+          <div class="testimonials-carousel swiper">
+              <div class="swiper-wrapper">
+                  <!-- School Director -->
+                  <div class="testimonial-item swiper-slide">
+                      <img src="assets/All/images/v3.jpg" 
+                           class="testimonial-img" 
+                           alt="School Director"
+                           data-en-alt="School Director"
+                           data-am-alt="የትምህርት ቤት ዳይሬክተር"
+                           data-om-alt="Paarlaamaa Mana Barumsaa">
+                      <h3 data-en="Mr. Kumelachew Shitie Mengistie"
+                          data-am="አቶ ኩመላቸው ሽትዬ መንግስቴ"
+                          data-om="Obbo Kumelachew Shitie Mengistie">
+                          Kumelachew Shitie Mengistie
+                      </h3>
+                      <h4 data-en="Academic Vice-Principal"
+                      data-am="የትምህርት ም/ር/መ/ር"
+                      data-om="Hoggansa Barumsaa">
+                      Academic Vice-Principal
+                  </h4>
+                      <p data-en="&quot;Our commitment to educational excellence drives every decision we make. We strive to create an environment where both students and teachers can reach their full potential.&quot;"
+                         data-am="&quot;የትምህርት ጥራት ማረጋገጫችን እያንዳንዱን ውሳኔ ይመራል። ተማሪዎች እና መምህራን ሙሉ አቅማቸውን የሚያዳብሩበት አካባቢ ለመፍጠር እንሞክራለን።&quot;"
+                         data-om="&quot;Qophii barnootaa keenya murteessaa hunda nu gargaara. Qe'ee barattootaafi barsiisotaa guddina guutaa isaaniif qopheessuuf karra nu gahan.&quot;">
+                          <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                          Our educational philosophy centers on holistic development and academic excellence.
+                          <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                  </div>
+  
+                  <!-- Academic Vice-Principal -->
+                  <div class="testimonial-item swiper-slide">
+                      <img src="assets/All/images/DDDDDD.JPG" 
+                           class="testimonial-img" 
+                           alt="Academic Vice-Principal"
+                           data-en-alt="Academic Vice-Principal"
+                           data-am-alt="የትምህርት ም/ር/መ/ር"
+                           data-om-alt="Hoggansa Barumsaa">
+                      <h3 data-en="Mr. Gashaw Alganeh Menesha"
+                          data-am="አቶ ጋሻው አልጋነህ መነሻ"
+                          data-om="Obbo Gashaw Alganeh Menesha">
+                          Gashaw Alganeh Menesha
+                      </h3>
+                      <h4 data-en="School Director"
+                          data-am="የትምህርት ቤት ዳይሬክተር"
+                          data-om="Paarlaamaa Mana Barumsaa">
+                          School Director
+                      </h4>
+                      <p data-en="&quot;Quality education requires continuous improvement and innovation. We're committed to implementing teaching methodologies that prepare students for future challenges.&quot;"
+                         data-am="&quot;የትምህርት ጥራት ቀጣይነት ያለው ማሻሻል እና ፈጠራ ይፈልጋል። ተማሪዎችን ለወደፊት ፈተናዎች የሚያዘጋጅ የትምህርት ዘዴዎችን ለመተግበር ቃል ተግተናል።&quot;"
+                         data-om="&quot;Barnoota gaarii jijjiiramaafi qo'annoomsa barbaachisa. Barattoota ulfaata duulaa irraa eegaluuf karaa barnootaa haaraa labsuuf karra nu gahan.&quot;">
+                          <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                          Our curriculum development focuses on 21st century skills and student-centered learning.
+                          <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                  </div>
+  
+                  <!-- IT Developer -->
+                  <div class="testimonial-item swiper-slide">
+                      <img src="assets/All/images/develoer.jpg" 
+                           class="testimonial-img" 
+                           alt="IT Systems Developer"
+                           data-en-alt="IT Developer"
+                           data-am-alt="የቴክኖሎጂ አማካሪ"
+                           data-om-alt="Qorata Teknooloojii">
+                      <h3 data-en="Abel Mesfin"
+                          data-am="አቤል መስፍን"
+                          data-om="Abel Mesfin">
+                          Abel Mesfin
+                      </h3>
+                      <h4 data-en="IT Systems Developer"
+                          data-am="የቴክኖሎጂ ስርዓት አማካሪ"
+                          data-om="Qorata Siistama Teknooloojii">
+                          IT Systems Developer
+                      </h4>
+                      <p data-en="&quot;Technology integration in education is crucial for modern learning. We're developing systems that enhance both teaching efficiency and student engagement.&quot;"
+                         data-am="&quot;በትምህርት ውስጥ የቴክኖሎጂ ውህደት ዘመናዊ ትምህርት ለማቅረብ አስፈላጊ ነው። የትምህርት ውጤታማነት እና የተማሪ ተሳትፎ የሚያሻሽሉ ስርዓቶችን እያዘጋጀን ነው።&quot;"
+                         data-om="&quot;Teknooloojii barnootaa keessatti walqabsiisuun barbaachisaa dha. Tarii fi hirmaannaa barattoota fooyya'uu dandeessisu siistamoota uumaa jirra.&quot;">
+                          <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                          Digital transformation in education requires both technical expertise and pedagogical understanding.
+                          <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                  </div>
+              </div>
+              <div class="swiper-pagination"></div>
+          </div>
       </div>
-    </section><!-- End Ttstimonials Section -->
-
+  </section>
   </main><!-- End #main -->
-
-  </main><!-- End #main -->
-
   <!-- ======= Footer ======= -->
   <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
 
